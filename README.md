@@ -1,43 +1,46 @@
-# My codes for my honors thesis.
+# 📡 Honors Thesis: Ionospheric Absorption Analysis Using Ionosonde and Riometer Data
 
-### Definitions:
+This repository contains code and visualizations developed for my honors thesis in Physics at the University of Calgary. The thesis investigates the correlation between ionosonde signal dropouts and high-frequency wave absorption, using data from Gakona, Alaska (ionosonde) and Dawson, Yukon (riometer).
 
-  _Ionosphere:_ Layer in the Earth's atmosphere with free electrons and ions lying at 50-1000km [1] above Earth's surface. Have sub-regions
-              D, E, and F layers. I focused on the D and E layers. The ionosphere makes long distance communication possible.
-  
-  _Ionosonde:_ Radar system looking vertically upwards [2] that measures the electron density of the ionosphere. It sends radio signals 
-             vertically and derives information from the time taken for waves to reflect back and the frequency shifts experience 
-             by signals.
-  
-  _Riometer:_ An instrument that measures the amount of cosmic radio noise that can pass through the ionosphere [3]. The power the riometer 
-            receives change with the ionospheric electron density
-  
-  _Appleton-Hartree equation:_ Equation describing how the absorption of high frequency (HF) signals are affected by the rate of
-                             collision of ionized particles with neutral particles in the ionosphere
+---
 
-### Goal:
+## 🧠 Background
 
-  Missing/fill values were detected in the Gakona, Alaska ionosonde's data in the Global Ionosphere Radio Observatory database. 
-      Missing values might have a link to riometer activity at Dawson, Yukon. My goal was to find correlations between Dawson, YK 
-      riometer and Gakona, AK ionosonde during specific occasions (concluded it is during high absorption events. Consistent with high 
-      frequency (HF) wave absorption interfering with the ionosonde's sounding technique where the ionosonde might not be receiving 
-      reflected waves back during high absorptions)
+**Ionosphere**: A charged region of the Earth's upper atmosphere (50–1000 km altitude), composed of free electrons and ions. It consists of D, E, and F layers — this project focuses on the **D and E layers**.
 
-### Brief overview of method:
+**Ionosonde**: A radar system that sends vertical radio pulses to measure the ionosphere’s electron density by analyzing signal reflections and frequency shifts.
 
-  Chose the year 2012's data to look into after having plotted ionosonde data from 2012-2022. 2012 provided consistent data. Then, I
-  focused on one day in 2012 that has absorption values greater than 3dB (looking for higher absorption events because the riometer
-  does not detect low absorption events, so there will be nothing to compare the ionosonde data with). Compared riometer and ionosonde
-  data by plotting using matplotlib and noticed ionosonde data drops when absorption values peak in riometer. 
-  Then, I chose 12 days in 2012 with the most count of absorption measurements greater than 3dB. Observed the same trend as before.
-  There was more plotting done with many different metrics to find consistency with the Appleton-Hartree equation.
+**Riometer**: An instrument that detects cosmic radio noise absorption, which varies with electron density in the ionosphere.
 
-### Citations:
+**Appleton–Hartree Equation**: Describes how high-frequency (HF) wave absorption is influenced by collisions between ionized and neutral particles in the ionosphere.
 
-  [1] McElroy, M. B. (2023), Ionosphere and magnetosphere, Encyclopædia Britannica.  Available from: 
-      https://www.britannica.com/science/ionosphere-and-magnetosphere
-      
-  [2] Anon (n.d.), Ionosonde, PITHIA. Available from: https://pithia-nrf.eu/activities-results/outreach/space-weather-research-instruments/ionosonde
+---
 
-  [3] R.A.D. Fiori, and D.W. Danskin (2016), Examination of the relationship between riometer-derived absorption and the integral proton 
-  flux in the context of modeling polar cap absorption, AGU Publications from: https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016SW001461
+## 🎯 Goal
+
+To determine whether missing values in the Gakona ionosonde data are linked to periods of high absorption detected by the Dawson riometer. This was tested under the hypothesis that **HF wave absorption during high-density events disrupts ionosonde signal reflection**, causing data gaps.
+
+---
+
+## 🔬 Method Overview
+
+- Selected the year **2012** after plotting ionosonde trends from 2012–2022 and identifying it as the most consistent dataset.
+- Chose individual days with **absorption > 3 dB** to analyze severe events (since low-absorption events are less detectable).
+- Conducted a **1-day case study**, followed by **12-day expanded analysis** on the highest absorption events.
+- Used **matplotlib** to compare absorption peaks against ionosonde data dropouts.
+- Patterns were consistent with predictions from the **Appleton–Hartree equation**.
+
+---
+
+## 📚 References
+
+[1] McElroy, M. B. (2023), *Ionosphere and Magnetosphere*, Encyclopædia Britannica  
+[2] PITHIA-NRF, *Ionosonde Instrument Overview*  
+[3] Fiori, R. A. D., & Danskin, D. W. (2016). *AGU Publications* — [Link](https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2016SW001461)
+
+---
+
+## ✍️ Author
+
+Minoda Fernando  
+BSc in Physics – University of Calgary 
